@@ -158,6 +158,15 @@
 		input.addEventListener('input', resetInputState);
 		loadTasks();
 		setDate();
+		
+		//create a dummy card
+		const dummyCard = generateCard("I'm a dummy card. You're better off ignoring me :-P");
+		if(dummyCard){
+			storeTask(
+				dummyCard.dataset.taskname,
+				dummyCard.dataset.taskdate
+			);
+		}
 	}
 
 	init();
