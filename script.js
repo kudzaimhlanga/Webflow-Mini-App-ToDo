@@ -110,6 +110,7 @@
 
 	function deleteCard(element) {
 		element.remove();
+		tasks = tasks.filter(n => n !== element.dataset.taskname)
 	}
 
 	function deleteTaskFromStorage(element) {
